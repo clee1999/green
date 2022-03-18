@@ -20,208 +20,242 @@ class Ville
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $Nom;
+    private $Name;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $code_iris;
+    private $Departement;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $Epci;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $classement;
+    private $Region;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="float")
      */
-    private $nom_iris;
+    private $Pop;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="float", nullable=true)
      */
-    private $population;
+    private $ScoreGolbalDepartement;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="float", nullable=true)
      */
-    private $score_global;
+    private $ScoreGlobalEpci;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="float", nullable=true)
      */
-    private $acces_interfaces_numerique;
+    private $ScoreGlobalRegion;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="float", nullable=true)
      */
-    private $acces_information;
+    private $ScoreGlobalDepartement2;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="float", nullable=true)
      */
-    private $competences_administratives;
+    private $ScoreGobalEpci2;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="float", nullable=true)
      */
-    private $competence_num_scolaire;
+    private $ScoreGobalRegion2;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $global_acces;
+    private $Geometrie;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="float")
      */
-    private $global_competences;
+    private $Lattitude;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $Longitude;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getNom(): ?string
+    public function getName(): ?string
     {
-        return $this->Nom;
+        return $this->Name;
     }
 
-    public function setNom(string $Nom): self
+    public function setName(string $Name): self
     {
-        $this->Nom = $Nom;
+        $this->Name = $Name;
 
         return $this;
     }
 
-    public function getCodeIris(): ?int
+    public function getDepartement(): ?string
     {
-        return $this->code_iris;
+        return $this->Departement;
     }
 
-    public function setCodeIris(int $code_iris): self
+    public function setDepartement(?string $Departement): self
     {
-        $this->code_iris = $code_iris;
+        $this->Departement = $Departement;
 
         return $this;
     }
 
-    public function getClassement(): ?string
+    public function getEpci(): ?string
     {
-        return $this->classement;
+        return $this->Epci;
     }
 
-    public function setClassement(string $classement): self
+    public function setEpci(?string $Epci): self
     {
-        $this->classement = $classement;
+        $this->Epci = $Epci;
 
         return $this;
     }
 
-    public function getNomIris(): ?string
+    public function getRegion(): ?string
     {
-        return $this->nom_iris;
+        return $this->Region;
     }
 
-    public function setNomIris(string $nom_iris): self
+    public function setRegion(string $Region): self
     {
-        $this->nom_iris = $nom_iris;
+        $this->Region = $Region;
 
         return $this;
     }
 
-    public function getPopulation(): ?int
+    public function getPop(): ?float
     {
-        return $this->population;
+        return $this->Pop;
     }
 
-    public function setPopulation(int $population): self
+    public function setPop(float $Pop): self
     {
-        $this->population = $population;
+        $this->Pop = $Pop;
 
         return $this;
     }
 
-    public function getScoreGlobal(): ?int
+    public function getScoreGolbalDepartement(): ?float
     {
-        return $this->score_global;
+        return $this->ScoreGolbalDepartement;
     }
 
-    public function setScoreGlobal(int $score_global): self
+    public function setScoreGolbalDepartement(?float $ScoreGolbalDepartement): self
     {
-        $this->score_global = $score_global;
+        $this->ScoreGolbalDepartement = $ScoreGolbalDepartement;
 
         return $this;
     }
 
-    public function getAccesInterfacesNumerique(): ?int
+    public function getScoreGlobalEpci(): ?float
     {
-        return $this->acces_interfaces_numerique;
+        return $this->ScoreGlobalEpci;
     }
 
-    public function setAccesInterfacesNumerique(int $acces_interfaces_numerique): self
+    public function setScoreGlobalEpci(?float $ScoreGlobalEpci): self
     {
-        $this->acces_interfaces_numerique = $acces_interfaces_numerique;
+        $this->ScoreGlobalEpci = $ScoreGlobalEpci;
 
         return $this;
     }
 
-    public function getAccesInformation(): ?int
+    public function getScoreGlobalRegion(): ?float
     {
-        return $this->acces_information;
+        return $this->ScoreGlobalRegion;
     }
 
-    public function setAccesInformation(int $acces_information): self
+    public function setScoreGlobalRegion(?float $ScoreGlobalRegion): self
     {
-        $this->acces_information = $acces_information;
+        $this->ScoreGlobalRegion = $ScoreGlobalRegion;
 
         return $this;
     }
 
-    public function getCompetencesAdministratives(): ?int
+    public function getScoreGlobalDepartement2(): ?float
     {
-        return $this->competences_administratives;
+        return $this->ScoreGlobalDepartement2;
     }
 
-    public function setCompetencesAdministratives(int $competences_administratives): self
+    public function setScoreGlobalDepartement2(?float $ScoreGlobalDepartement2): self
     {
-        $this->competences_administratives = $competences_administratives;
+        $this->ScoreGlobalDepartement2 = $ScoreGlobalDepartement2;
 
         return $this;
     }
 
-    public function getCompetenceNumScolaire(): ?int
+    public function getScoreGobalEpci2(): ?float
     {
-        return $this->competence_num_scolaire;
+        return $this->ScoreGobalEpci2;
     }
 
-    public function setCompetenceNumScolaire(int $competence_num_scolaire): self
+    public function setScoreGobalEpci2(?float $ScoreGobalEpci2): self
     {
-        $this->competence_num_scolaire = $competence_num_scolaire;
+        $this->ScoreGobalEpci2 = $ScoreGobalEpci2;
 
         return $this;
     }
 
-    public function getGlobalAcces(): ?int
+    public function getScoreGobalRegion2(): ?float
     {
-        return $this->global_acces;
+        return $this->ScoreGobalRegion2;
     }
 
-    public function setGlobalAcces(int $global_acces): self
+    public function setScoreGobalRegion2(?float $ScoreGobalRegion2): self
     {
-        $this->global_acces = $global_acces;
+        $this->ScoreGobalRegion2 = $ScoreGobalRegion2;
 
         return $this;
     }
 
-    public function getGlobalCompetences(): ?int
+    public function getGeometrie(): ?string
     {
-        return $this->global_competences;
+        return $this->Geometrie;
     }
 
-    public function setGlobalCompetences(int $global_competences): self
+    public function setGeometrie(?string $Geometrie): self
     {
-        $this->global_competences = $global_competences;
+        $this->Geometrie = $Geometrie;
+
+        return $this;
+    }
+
+    public function getLattitude(): ?float
+    {
+        return $this->Lattitude;
+    }
+
+    public function setLattitude(float $Lattitude): self
+    {
+        $this->Lattitude = $Lattitude;
+
+        return $this;
+    }
+
+    public function getLongitude(): ?float
+    {
+        return $this->Longitude;
+    }
+
+    public function setLongitude(float $Longitude): self
+    {
+        $this->Longitude = $Longitude;
 
         return $this;
     }
