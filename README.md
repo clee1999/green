@@ -4,6 +4,12 @@
 cd docker/ && docker-compose up --build
 ```
 
+Pour update la bdd :
+
+```bash
+docker-compose exec php-fpm bin/console d:s:u --force
+```
+
 To access directly from local host the PostgreSQL database container
 
 ```bash
