@@ -33,42 +33,42 @@ class Ville
     private $Epci;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $Region;
 
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $Pop;
 
     /**
-     * @ORM\Column(type="float", nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $ScoreGolbalDepartement;
 
     /**
-     * @ORM\Column(type="float", nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $ScoreGlobalEpci;
 
     /**
-     * @ORM\Column(type="float", nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $ScoreGlobalRegion;
 
     /**
-     * @ORM\Column(type="float", nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $ScoreGlobalDepartement2;
 
     /**
-     * @ORM\Column(type="float", nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $ScoreGobalEpci2;
 
     /**
-     * @ORM\Column(type="float", nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $ScoreGobalRegion2;
 
@@ -78,12 +78,12 @@ class Ville
     private $Geometrie;
 
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $Lattitude;
 
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $Longitude;
 
@@ -140,84 +140,84 @@ class Ville
         return $this;
     }
 
-    public function getPop(): ?float
+    public function getPop(): ?string
     {
         return $this->Pop;
     }
 
-    public function setPop(float $Pop): self
+    public function setPop(string $Pop): self
     {
         $this->Pop = $Pop;
 
         return $this;
     }
 
-    public function getScoreGolbalDepartement(): ?float
+    public function getScoreGolbalDepartement(): ?string
     {
         return $this->ScoreGolbalDepartement;
     }
 
-    public function setScoreGolbalDepartement(?float $ScoreGolbalDepartement): self
+    public function setScoreGolbalDepartement(?string $ScoreGolbalDepartement): self
     {
         $this->ScoreGolbalDepartement = $ScoreGolbalDepartement;
 
         return $this;
     }
 
-    public function getScoreGlobalEpci(): ?float
+    public function getScoreGlobalEpci(): ?string
     {
         return $this->ScoreGlobalEpci;
     }
 
-    public function setScoreGlobalEpci(?float $ScoreGlobalEpci): self
+    public function setScoreGlobalEpci(?string $ScoreGlobalEpci): self
     {
         $this->ScoreGlobalEpci = $ScoreGlobalEpci;
 
         return $this;
     }
 
-    public function getScoreGlobalRegion(): ?float
+    public function getScoreGlobalRegion(): ?string
     {
         return $this->ScoreGlobalRegion;
     }
 
-    public function setScoreGlobalRegion(?float $ScoreGlobalRegion): self
+    public function setScoreGlobalRegion(?string $ScoreGlobalRegion): self
     {
         $this->ScoreGlobalRegion = $ScoreGlobalRegion;
 
         return $this;
     }
 
-    public function getScoreGlobalDepartement2(): ?float
+    public function getScoreGlobalDepartement2(): ?string
     {
         return $this->ScoreGlobalDepartement2;
     }
 
-    public function setScoreGlobalDepartement2(?float $ScoreGlobalDepartement2): self
+    public function setScoreGlobalDepartement2(?string $ScoreGlobalDepartement2): self
     {
         $this->ScoreGlobalDepartement2 = $ScoreGlobalDepartement2;
 
         return $this;
     }
 
-    public function getScoreGobalEpci2(): ?float
+    public function getScoreGobalEpci2(): ?string
     {
         return $this->ScoreGobalEpci2;
     }
 
-    public function setScoreGobalEpci2(?float $ScoreGobalEpci2): self
+    public function setScoreGobalEpci2(?string $ScoreGobalEpci2): self
     {
         $this->ScoreGobalEpci2 = $ScoreGobalEpci2;
 
         return $this;
     }
 
-    public function getScoreGobalRegion2(): ?float
+    public function getScoreGobalRegion2(): ?string
     {
         return $this->ScoreGobalRegion2;
     }
 
-    public function setScoreGobalRegion2(?float $ScoreGobalRegion2): self
+    public function setScoreGobalRegion2(?string $ScoreGobalRegion2): self
     {
         $this->ScoreGobalRegion2 = $ScoreGobalRegion2;
 
@@ -236,24 +236,24 @@ class Ville
         return $this;
     }
 
-    public function getLattitude(): ?float
+    public function getLattitude(): ?string
     {
         return $this->Lattitude;
     }
 
-    public function setLattitude(float $Lattitude): self
+    public function setLattitude(string $Lattitude): self
     {
         $this->Lattitude = $Lattitude;
 
         return $this;
     }
 
-    public function getLongitude(): ?float
+    public function getLongitude(): ?string
     {
         return $this->Longitude;
     }
 
-    public function setLongitude(float $Longitude): self
+    public function setLongitude(string $Longitude): self
     {
         $this->Longitude = $Longitude;
 
