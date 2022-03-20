@@ -194,4 +194,6 @@ class AccesVilleRepository extends ServiceEntityRepository
         $stmt->execute(array('reg' => $reg));
         return $stmt->fetchOne();
     }
+
 }
+

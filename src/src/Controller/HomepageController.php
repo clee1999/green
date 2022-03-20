@@ -4,7 +4,9 @@ namespace App\Controller;
 
 use App\Repository\VilleRepository;
 use App\Repository\AccesVilleRepository;
+
 use App\Entity\AccesVille;
+
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -25,6 +27,7 @@ class HomepageController extends AbstractController
 
     public function index(AccesVilleRepository $accesVillerepository): Response
     {
+      
         $testsingle = $accesVillerepository->findAvgAccesInformationRegionByRegionName('CORSE');
         $testarray = $accesVillerepository->findVilleIndicesDepartementRegion('Abancourt');
         return $this->render('homepage/homepage.html.twig', [
@@ -124,6 +127,7 @@ class HomepageController extends AbstractController
         // Create inner joins
 
 
+
         // Fields Search
         foreach ($columns as $key => $column) {
             if ($column['search']['value'] != '') {
@@ -134,6 +138,7 @@ class HomepageController extends AbstractController
                 // $column['name'] is the name of the column as sent by the JS
                 switch ($column['name']) {
                     case 'name': {
+
                         $searchQuery = 'town.name LIKE \'%' . $searchItem . '%\'';
                         break;
                     }
@@ -149,6 +154,7 @@ class HomepageController extends AbstractController
                         $searchQuery = 'region.name LIKE \'%' . $searchItem . '%\'';
                         break;
                     }
+
                 }
 
                 if ($searchQuery !== null) {
@@ -169,6 +175,7 @@ class HomepageController extends AbstractController
 
                 switch ($order['name']) {
                     case 'name': {
+
                         $orderColumn = 'town.name';
                         break;
                     }
@@ -184,6 +191,7 @@ class HomepageController extends AbstractController
                         $orderColumn = 'region.name';
                         break;
                     }
+
                 }
 
                 if ($orderColumn !== null) {
@@ -229,6 +237,7 @@ class HomepageController extends AbstractController
 
                 switch ($column['name']) {
                     case 'name': {
+
                         $name = $town->getName();
 
                         // Do this kind of treatments if you suspect that the string is not JS compatible
@@ -271,10 +280,10 @@ class HomepageController extends AbstractController
                             $region = $department->getRegion();
                             if ($region !== null) {
                                 $responseTemp = $region->getName();
+
                             }
+                            break;
                         }
-                        break;
-                    }
                 }
 
                 // Add the found data to the json
