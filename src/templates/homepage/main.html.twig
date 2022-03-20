@@ -1,0 +1,285 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Indice de fragilité numérique{% endblock %}
+
+{% block body %}
+
+<section id="home" class="home-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="home-content">
+                    <h1>Indice national de Fragilité Numérique</h1>
+                    <p>L'indice national de fragilité numérique révèle les zones d'exclusion numérique sur un territoire donné.
+                        Cet outil permet de comparer l'indice de fragilité numérique des départements, communes ou régions.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="img-indice">
+                    <picture>
+                        <source srcset="assets/images/indice.webp" type="image/webp">
+                        <source srcset="assets/images/indice.jpg" type="image/jpeg">
+                        <img src="assets/images/indice.jpg" alt="Image l'indice national de fragilité numérique">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="search" class="search section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <h2>Analysez les données de votre commune</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-9 col-md-6 col-12">
+                <div class="search-feature">
+                    <i class="lni lni lni-cog"></i>
+                    <p>Un indice élevé indique une fragilité numérique plus importante.<br>
+                        Le calcul des indicateurs étant relatif par rapport aux autres communes, la moyenne de chaque indicateur est de 100.</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-12 col-md-6 col-12">
+                <form class="d-flex justify-content-center">
+                    <input class="form-control" id="choices-text-preset-values" type="text" placeholder="Rechercher..." />
+                    <button class="btn-search" type="button">
+                        OK
+                    </button>
+                </form>
+            </div>
+        </div>
+</section>
+<section class="score-section-pink section">
+    <div class="container justify-content-center">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
+                <div class="title">
+                    <h2>Score global</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="score">
+                            <h3 class="counter"><span id="secondo1">104</h3>
+                            <p>Hauts-de-Seine</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="score">
+                            <h3 class="counter"><span id="secondo2">99</h3>
+                            <p>Asnières-sur-Seine</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="score">
+                            <h3 class="counter"><span id="secondo3">-3</h3>
+                            <p>Ile-de-France</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="score-section-white section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
+                <div class="title">
+                    <h2>Accès à l'information</h2>
+                    <p>Identifier des territoires mal couverts par une offre de service d'information ou des populations qui auront des difficultés à comprendre l'information.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="score">
+                            <h3 class="counter"><span id="secondo1">104</h3>
+                            <p>Hauts-de-Seine</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="score">
+                            <h3 class="counter"><span id="secondo2">99</h3>
+                            <p>Asnières-sur-Seine</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="score">
+                            <h3 class="counter"><span id="secondo3">-3</h3>
+                            <p>Ile-de-France</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-illectronisme">
+            <picture>
+                <source srcset="assets/images/illectronisme.webp" type="image/webp">
+                <source srcset="assets/images/illectronisme.jpg" type="image/jpeg">
+                <img src="assets/images/illectronisme.jpg" alt="Image représentant l'apprentissage de l'informatique d'une personne agée">
+            </picture>
+        </div>
+    </div>
+</section>
+<section class="score-section-pink section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
+                <div class="title">
+                    <h2>Accès aux interfaces numériques</h2>
+                    <p>Identifier des territoires mal couverts par les réseaux ou dans lesquels des populations auront des difficultés financières à y accéder.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="score">
+                            <h3 class="counter"><span id="secondo1">104</h3>
+                            <p>Hauts-de-Seine</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="score">
+                            <h3 class="counter"><span id="secondo2">99</h3>
+                            <p>Asnières-sur-Seine</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="score">
+                            <h3 class="counter"><span id="secondo3">-3</h3>
+                            <p>Ile-de-France</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="score-section-white section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
+                <div class="title">
+                    <h2>Compétences numérique</h2>
+                    <p>Identifier des populations parmi lesquelles s'observe une fréquence d'illectronisme ou difficulté à utiliser internet.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="score">
+                            <h3 class="counter"><span id="secondo1">104</h3>
+                            <p>Hauts-de-Seine</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="score">
+                            <h3 class="counter"><span id="secondo2">99</h3>
+                            <p>Asnières-sur-Seine</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="score">
+                            <h3 class="counter"><span id="secondo3">-3</h3>
+                            <p>Ile-de-France</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="score-section-pink section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
+                <div class="title">
+                    <h2>Compétences administratives</h2>
+                    <p>Identifier des populations parmi lesquelles s'observent des difficultés à accomplir des procédures administratives.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="score">
+                            <h3 class="counter"><span id="secondo1">104</h3>
+                            <p>Hauts-de-Seine</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="score">
+                            <h3 class="counter"><span id="secondo2">99</h3>
+                            <p>Asnières-sur-Seine</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="score">
+                            <h3 class="counter"><span id="secondo3">-3</h3>
+                            <p>Ile-de-France</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-administrative">
+            <picture>
+                <source srcset="assets/images/administrative.webp" type="image/webp">
+                <source srcset="assets/images/administrative.jpg" type="image/jpeg">
+                <img src="assets/images/administrative.jpg" alt="Image représentant les tâches administratives">
+            </picture>
+        </div>
+    </div>
+</section>
+<section class="section download-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
+                <div class="download-content">
+                    <div class="button">
+                        <a href="javascript:void(0)" class="btn">Télécharger le rapport de Asnières-sur-Seine</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-4 col-12">
+            <div class="single-footer f-about">
+                <p class="copyright-text">© 2022 LY TON PIONNIER PIEDAGNEL</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top">
+    <i class="lni lni-chevron-up"></i>
+</a>
+
+{% endblock %}
+{% block javascripts %}
+{#    {{ parent() }}#}
+    <script>
+    </script>
+{% endblock %}
