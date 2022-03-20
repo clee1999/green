@@ -1,0 +1,48 @@
+[2022-03-20 19:36:05.872] [sharedprocess] [info] Starting worker process with pid 126777 (type: fileWatcher, window: 1).
+[2022-03-20 19:36:39.530] [sharedprocess] [info] Getting Manifest... ms-vscode-remote.remote-containers
+[2022-03-20 19:36:39.538] [sharedprocess] [info] Installing extension: ms-vscode-remote.remote-containers
+[2022-03-20 19:36:41.249] [sharedprocess] [info] Downloaded extension: ms-vscode-remote.remote-containers /home/nenber/Documents/green/CachedExtensionVSIXs/ms-vscode-remote.remote-containers-0.224.3
+[2022-03-20 19:36:42.192] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.183c0634-8d34-478a-8864-7659507da6c6: ms-vscode-remote.remote-containers
+[2022-03-20 19:36:42.210] [sharedprocess] [info] Renamed to /root/.vscode/extensions/ms-vscode-remote.remote-containers-0.224.3
+[2022-03-20 19:36:42.214] [sharedprocess] [info] Extracting completed. ms-vscode-remote.remote-containers
+[2022-03-20 19:36:42.222] [sharedprocess] [info] Extension installed successfully: ms-vscode-remote.remote-containers
+[2022-03-20 19:37:22.305] [sharedprocess] [info] Starting worker process with pid 127129 (type: fileWatcher, window: 3).
+[2022-03-20 19:37:22.636] [sharedprocess] [info] Worker process with pid 127129 terminated normally (type: fileWatcher, window: 3).
+[2022-03-20 19:37:31.051] [sharedprocess] [info] Starting worker process with pid 127257 (type: fileWatcher, window: 4).
+[2022-03-20 19:37:46.478] [sharedprocess] [info] Worker process with pid 127257 terminated normally (type: fileWatcher, window: 4).
+[2022-03-20 19:37:48.156] [sharedprocess] [info] Starting worker process with pid 127865 (type: fileWatcher, window: 4).
+[2022-03-20 19:38:10.626] [sharedprocess] [info] Worker process with pid 127865 terminated normally (type: fileWatcher, window: 4).
+[2022-03-20 19:38:13.998] [sharedprocess] [info] Getting Manifest... ms-vscode-remote.vscode-remote-extensionpack
+[2022-03-20 19:38:14.010] [sharedprocess] [info] Installing extension: ms-vscode-remote.vscode-remote-extensionpack
+[2022-03-20 19:38:14.541] [sharedprocess] [info] Getting Manifest... ms-vscode-remote.remote-wsl
+[2022-03-20 19:38:15.071] [sharedprocess] [info] Getting Manifest... ms-vscode-remote.remote-ssh
+[2022-03-20 19:38:15.890] [sharedprocess] [info] Getting Manifest... ms-vscode-remote.remote-ssh-edit
+[2022-03-20 19:38:16.484] [sharedprocess] [info] Installing extension: ms-vscode-remote.remote-wsl
+[2022-03-20 19:38:16.484] [sharedprocess] [info] Installing extension: ms-vscode-remote.remote-ssh
+[2022-03-20 19:38:16.485] [sharedprocess] [info] Installing extension: ms-vscode-remote.remote-ssh-edit
+[2022-03-20 19:38:17.539] [sharedprocess] [info] Downloaded extension: ms-vscode-remote.remote-ssh-edit /home/nenber/Documents/green/CachedExtensionVSIXs/ms-vscode-remote.remote-ssh-edit-0.76.1
+[2022-03-20 19:38:17.541] [sharedprocess] [info] Downloaded extension: ms-vscode-remote.remote-ssh /home/nenber/Documents/green/CachedExtensionVSIXs/ms-vscode-remote.remote-ssh-0.76.1
+[2022-03-20 19:38:17.589] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.ac1f0361-0fcc-4d48-8b04-81920d0ebe7c: ms-vscode-remote.remote-ssh-edit
+[2022-03-20 19:38:17.594] [sharedprocess] [info] Renamed to /root/.vscode/extensions/ms-vscode-remote.remote-ssh-edit-0.76.1
+[2022-03-20 19:38:17.597] [sharedprocess] [info] Extracting completed. ms-vscode-remote.remote-ssh-edit
+[2022-03-20 19:38:17.716] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.78d439f3-5e2c-4f16-8e15-cc391086947e: ms-vscode-remote.remote-ssh
+[2022-03-20 19:38:17.726] [sharedprocess] [info] Renamed to /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.76.1
+[2022-03-20 19:38:17.728] [sharedprocess] [info] Extracting completed. ms-vscode-remote.remote-ssh
+[2022-03-20 19:38:17.930] [sharedprocess] [info] Downloaded extension: ms-vscode-remote.remote-wsl /home/nenber/Documents/green/CachedExtensionVSIXs/ms-vscode-remote.remote-wsl-0.64.2
+[2022-03-20 19:38:18.060] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.9fa3b3a4-f69f-49a1-8cff-28ba82895440: ms-vscode-remote.remote-wsl
+[2022-03-20 19:38:18.065] [sharedprocess] [info] Renamed to /root/.vscode/extensions/ms-vscode-remote.remote-wsl-0.64.2
+[2022-03-20 19:38:18.068] [sharedprocess] [info] Extracting completed. ms-vscode-remote.remote-wsl
+[2022-03-20 19:38:18.981] [sharedprocess] [info] Downloaded extension: ms-vscode-remote.vscode-remote-extensionpack /home/nenber/Documents/green/CachedExtensionVSIXs/ms-vscode-remote.vscode-remote-extensionpack-0.21.0
+[2022-03-20 19:38:19.001] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.1a31c206-9fda-48ed-bf84-2c209de17e71: ms-vscode-remote.vscode-remote-extensionpack
+[2022-03-20 19:38:19.009] [sharedprocess] [info] Renamed to /root/.vscode/extensions/ms-vscode-remote.vscode-remote-extensionpack-0.21.0
+[2022-03-20 19:38:19.010] [sharedprocess] [info] Extracting completed. ms-vscode-remote.vscode-remote-extensionpack
+[2022-03-20 19:38:19.015] [sharedprocess] [info] Extension installed successfully: ms-vscode-remote.remote-ssh-edit
+[2022-03-20 19:38:19.016] [sharedprocess] [info] Extension installed successfully: ms-vscode-remote.remote-ssh
+[2022-03-20 19:38:19.017] [sharedprocess] [info] Extension installed successfully: ms-vscode-remote.remote-wsl
+[2022-03-20 19:38:19.017] [sharedprocess] [info] Extension installed successfully: ms-vscode-remote.vscode-remote-extensionpack
+[2022-03-20 19:38:57.056] [sharedprocess] [info] Worker process with pid 126777 terminated normally (type: fileWatcher, window: 1).
+[2022-03-20 19:38:58.653] [sharedprocess] [info] Starting worker process with pid 129717 (type: fileWatcher, window: 1).
+[2022-03-20 19:40:25.680] [sharedprocess] [info] Starting worker process with pid 133191 (type: fileWatcher, window: 5).
+[2022-03-20 19:40:54.499] [sharedprocess] [info] Worker process with pid 133191 terminated normally (type: fileWatcher, window: 5).
+[2022-03-20 19:40:56.214] [sharedprocess] [info] Starting worker process with pid 134727 (type: fileWatcher, window: 5).
+[2022-03-20 19:40:57.123] [sharedprocess] [info] Worker process with pid 129717 terminated normally (type: fileWatcher, window: 1).

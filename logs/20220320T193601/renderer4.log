@@ -1,0 +1,10 @@
+[2022-03-20 19:37:30.837] [renderer4] [info] Invoking resolveAuthority(attached-container)
+[2022-03-20 19:37:31.080] [renderer4] [info] IExtensionHostStarter.start() took 83 ms.
+[2022-03-20 19:37:31.465] [renderer4] [error] [Extension Host] (node:127256) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(Use `code --trace-deprecation ...` to show where the warning was created)
+[2022-03-20 19:37:39.496] [renderer4] [info] resolveAuthority(attached-container) returned '127.0.0.1:37209' after 8656 ms
+[2022-03-20 19:37:48.148] [renderer4] [info] IExtensionHostStarter.start() took 34 ms.
+[2022-03-20 19:37:48.607] [renderer4] [error] [Extension Host] (node:127864) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(Use `code --trace-deprecation ...` to show where the warning was created)
+[2022-03-20 19:37:48.857] [renderer4] [info] Invoking resolveAuthority(attached-container)
+[2022-03-20 19:37:49.748] [renderer4] [info] resolveAuthority(attached-container) returned '127.0.0.1:46315' after 891 ms

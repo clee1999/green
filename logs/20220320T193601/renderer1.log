@@ -1,0 +1,24 @@
+[2022-03-20 19:36:04.663] [renderer1] [info] IExtensionHostStarter.start() took 107 ms.
+[2022-03-20 19:36:05.274] [renderer1] [error] [Extension Host] (node:126738) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(Use `code --trace-deprecation ...` to show where the warning was created)
+[2022-03-20 19:38:19.156] [renderer1] [critical] Extension 'ms-vscode-remote.remote-ssh' appears in product.json but enables LESS API proposals than the extension wants.
+package.json (LOSES): resolvers, terminalDataWriteEvent, contribViewsRemote, telemetry
+product.json (WINS): resolvers, terminalDataWriteEvent, contribViewsRemote
+[2022-03-20 19:38:19.377] [renderer1] [error] Assertion Failed: argument is undefined or null: Error: Assertion Failed: argument is undefined or null
+    at c (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:74:4310)
+    at ql.selectStep (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2820:104940)
+    at ql.buildCategorySlide (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2952:17570)
+    at ql.buildCategoriesSlide (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2952:3871)
+    at ql.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2820:95516)
+    at async i.doSetInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2351:26831)
+    at async i.doOpenEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2351:25204)
+    at async i.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2351:24830)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2551:16600
+[2022-03-20 19:38:58.676] [renderer1] [info] IExtensionHostStarter.start() took 87 ms.
+[2022-03-20 19:38:59.089] [renderer1] [error] [Extension Host] (node:129716) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(Use `code --trace-deprecation ...` to show where the warning was created)
+[2022-03-20 19:38:59.138] [renderer1] [critical] Extension 'ms-vscode-remote.remote-ssh' appears in product.json but enables LESS API proposals than the extension wants.
+package.json (LOSES): resolvers, terminalDataWriteEvent, contribViewsRemote, telemetry
+product.json (WINS): resolvers, terminalDataWriteEvent, contribViewsRemote
+[2022-03-20 19:38:59.356] [renderer1] [info] Invoking resolveAuthority(attached-container)
+[2022-03-20 19:39:00.262] [renderer1] [info] resolveAuthority(attached-container) returned '127.0.0.1:39549' after 905 ms

@@ -1,0 +1,27 @@
+[2022-03-20 19:36:01.459] [main] [info] update#setState idle
+[2022-03-20 19:36:01.547] [main] [info] ExtensionHostStarterWorker created
+[2022-03-20 19:36:04.581] [main] [info] Starting extension host with pid 126738 (fork() took 21 ms).
+[2022-03-20 19:36:04.581] [main] [info] ExtensionHostStarterWorker.start() took 25 ms.
+[2022-03-20 19:36:05.063] [main] [warning] Switching to using in-memory credential store instead because Keytar failed to load: Transport « disabled » inconnu ou non pris en charge pour l’adresse « disabled: »
+[2022-03-20 19:36:31.464] [main] [info] update#setState checking for updates
+[2022-03-20 19:36:31.506] [main] [info] update#setState available for download
+[2022-03-20 19:37:22.267] [main] [info] Starting extension host with pid 127128 (fork() took 12 ms).
+[2022-03-20 19:37:22.268] [main] [info] ExtensionHostStarterWorker.start() took 15 ms.
+[2022-03-20 19:37:22.862] [main] [info] Extension host with pid 127128 exited with code: 0, signal: null.
+[2022-03-20 19:37:31.011] [main] [info] Starting extension host with pid 127256 (fork() took 11 ms).
+[2022-03-20 19:37:31.012] [main] [info] ExtensionHostStarterWorker.start() took 13 ms.
+[2022-03-20 19:37:46.501] [main] [info] Extension host with pid 127256 exited with code: 0, signal: null.
+[2022-03-20 19:37:48.125] [main] [info] Starting extension host with pid 127864 (fork() took 11 ms).
+[2022-03-20 19:37:48.126] [main] [info] ExtensionHostStarterWorker.start() took 13 ms.
+[2022-03-20 19:38:10.667] [main] [info] Extension host with pid 127864 exited with code: 0, signal: null.
+[2022-03-20 19:38:57.073] [main] [info] Extension host with pid 126738 exited with code: 0, signal: null.
+[2022-03-20 19:38:58.603] [main] [info] Starting extension host with pid 129716 (fork() took 11 ms).
+[2022-03-20 19:38:58.604] [main] [info] ExtensionHostStarterWorker.start() took 13 ms.
+[2022-03-20 19:40:25.654] [main] [info] Starting extension host with pid 133190 (fork() took 13 ms).
+[2022-03-20 19:40:25.654] [main] [info] ExtensionHostStarterWorker.start() took 15 ms.
+[2022-03-20 19:40:54.507] [main] [info] Extension host with pid 133190 exited with code: 0, signal: null.
+[2022-03-20 19:40:56.184] [main] [info] Starting extension host with pid 134726 (fork() took 12 ms).
+[2022-03-20 19:40:56.184] [main] [info] ExtensionHostStarterWorker.start() took 12 ms.
+[2022-03-20 19:40:57.127] [main] [info] Extension host with pid 129716 exited with code: 0, signal: null.
+[2022-03-20 19:42:03.058] [main] [info] Waiting for extension host with pid 134726 to exit.
+[2022-03-20 19:42:03.065] [main] [info] Extension host with pid 134726 exited with code: 0, signal: null.

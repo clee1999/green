@@ -1,0 +1,198 @@
+[2022-03-20T19:40:56.939Z] Remote-Containers 0.224.3 in VS Code 1.64.2 (f80445acd5a3dadef24aa209168452a3d97cc326).
+[2022-03-20T19:40:56.939Z] Start: Resolving Remote
+[2022-03-20T19:40:56.943Z] Setting up container: /php-fpm
+[2022-03-20T19:40:56.959Z] Start: Run: docker inspect --type container /php-fpm
+[2022-03-20T19:40:57.029Z] Stop (70 ms): Run: docker inspect --type container /php-fpm
+[2022-03-20T19:40:57.040Z] Start: Check Docker is running
+[2022-03-20T19:40:57.041Z] Start: Run: docker version --format {{.Server.APIVersion}}
+[2022-03-20T19:40:57.164Z] Stop (123 ms): Run: docker version --format {{.Server.APIVersion}}
+[2022-03-20T19:40:57.165Z] Server API version: 1.41
+[2022-03-20T19:40:57.165Z] Stop (125 ms): Check Docker is running
+[2022-03-20T19:40:57.167Z] Start: Inspecting container
+[2022-03-20T19:40:57.167Z] Start: Run: docker inspect --type container 20425156fa0c6610fe239598dae76cb2b0c3448831e0cd2479e17e5f44a3ddda
+[2022-03-20T19:40:57.251Z] Stop (84 ms): Run: docker inspect --type container 20425156fa0c6610fe239598dae76cb2b0c3448831e0cd2479e17e5f44a3ddda
+[2022-03-20T19:40:57.252Z] Stop (85 ms): Inspecting container
+[2022-03-20T19:40:57.255Z] Start: Run in container: /bin/sh
+[2022-03-20T19:40:57.267Z] Start: Run in container: uname -m
+[2022-03-20T19:40:57.444Z] x86_64
+[2022-03-20T19:40:57.444Z] 
+[2022-03-20T19:40:57.445Z] Stop (178 ms): Run in container: uname -m
+[2022-03-20T19:40:57.445Z] Start: Run in container: (cat /etc/os-release || cat /usr/lib/os-release) 2>/dev/null
+[2022-03-20T19:40:57.447Z] PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_ID="11"
+VERSION="11 (bullseye)"
+VERSION_CODENAME=bullseye
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+[2022-03-20T19:40:57.448Z] 
+[2022-03-20T19:40:57.449Z] Stop (4 ms): Run in container: (cat /etc/os-release || cat /usr/lib/os-release) 2>/dev/null
+[2022-03-20T19:40:57.450Z] Start: Run in container: cat /etc/passwd
+[2022-03-20T19:40:57.452Z] Stop (2 ms): Run in container: cat /etc/passwd
+[2022-03-20T19:40:57.454Z] Start: Run in container: test -d /root/.vscode-server
+[2022-03-20T19:40:57.455Z] 
+[2022-03-20T19:40:57.455Z] 
+[2022-03-20T19:40:57.455Z] Stop (1 ms): Run in container: test -d /root/.vscode-server
+[2022-03-20T19:40:57.456Z] Start: Run in container: test ! -f '/root/.vscode-server/data/Machine/.writeMachineSettingsMarker' && set -o noclobber && mkdir -p '/root/.vscode-server/data/Machine' && { > '/root/.vscode-server/data/Machine/.writeMachineSettingsMarker' ; } 2> /dev/null
+[2022-03-20T19:40:57.457Z] 
+[2022-03-20T19:40:57.458Z] 
+[2022-03-20T19:40:57.458Z] Exit code 1
+[2022-03-20T19:40:57.458Z] Stop (2 ms): Run in container: test ! -f '/root/.vscode-server/data/Machine/.writeMachineSettingsMarker' && set -o noclobber && mkdir -p '/root/.vscode-server/data/Machine' && { > '/root/.vscode-server/data/Machine/.writeMachineSettingsMarker' ; } 2> /dev/null
+[2022-03-20T19:40:57.458Z] Start: Run in container: cat /root/.vscode-server/data/Machine/settings.json
+[2022-03-20T19:40:57.460Z] 
+[2022-03-20T19:40:57.461Z] cat: /root/.vscode-server/data/Machine/settings.json: No such file or directory
+[2022-03-20T19:40:57.461Z] Exit code 1
+[2022-03-20T19:40:57.461Z] Stop (3 ms): Run in container: cat /root/.vscode-server/data/Machine/settings.json
+[2022-03-20T19:40:57.462Z] Start: Run in container: test -d /root/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326
+[2022-03-20T19:40:57.463Z] 
+[2022-03-20T19:40:57.463Z] 
+[2022-03-20T19:40:57.464Z] Stop (2 ms): Run in container: test -d /root/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326
+[2022-03-20T19:40:57.464Z] Start: Launching Remote-Containers helper.
+[2022-03-20T19:40:57.465Z] ssh-agent: SSH_AUTH_SOCK not set on host.
+[2022-03-20T19:40:57.466Z] Start: Run: gpgconf --list-dir agent-extra-socket
+[2022-03-20T19:40:57.475Z] Stop (9 ms): Run: gpgconf --list-dir agent-extra-socket
+[2022-03-20T19:40:57.476Z] /root/.gnupg/S.gpg-agent.extra
+[2022-03-20T19:40:57.476Z] 
+[2022-03-20T19:40:57.477Z] Start: Run in container: gpgconf --list-dir agent-socket
+[2022-03-20T19:40:57.484Z] 
+[2022-03-20T19:40:57.484Z] /bin/sh: 8: gpgconf: not found
+[2022-03-20T19:40:57.484Z] Exit code 127
+[2022-03-20T19:40:57.485Z] Stop (8 ms): Run in container: gpgconf --list-dir agent-socket
+[2022-03-20T19:40:57.486Z] Start: Run in container: /bin/sh
+[2022-03-20T19:40:57.486Z] Stop (22 ms): Launching Remote-Containers helper.
+[2022-03-20T19:40:57.494Z] userEnvProbe: loginInteractiveShell (default)
+[2022-03-20T19:40:57.496Z] userEnvProbe shell: /bin/bash
+[2022-03-20T19:40:57.506Z] Start: Run in container: cat <<'EOF-/tmp/vscode-remote-containers-c409b92fc381156bbe20a66ef529a2bc19fa6d32.js' >/tmp/vscode-remote-containers-c409b92fc381156bbe20a66ef529a2bc19fa6d32.js
+[2022-03-20T19:40:57.507Z] Start: Run in container: # Test for /root/.ssh/known_hosts and ssh
+[2022-03-20T19:40:57.508Z] ssh not found
+[2022-03-20T19:40:57.509Z] 
+[2022-03-20T19:40:57.509Z] Exit code 1
+[2022-03-20T19:40:57.509Z] Stop (2 ms): Run in container: # Test for /root/.ssh/known_hosts and ssh
+[2022-03-20T19:40:57.509Z] Start: Run in container: command -v git >/dev/null 2>&1 && git config --system --replace-all credential.helper '!f() { /root/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/node /tmp/vscode-remote-containers-c409b92fc381156bbe20a66ef529a2bc19fa6d32.js $*; }; f' || true
+[2022-03-20T19:40:57.514Z] 
+[2022-03-20T19:40:57.514Z] 
+[2022-03-20T19:40:57.514Z] Stop (5 ms): Run in container: command -v git >/dev/null 2>&1 && git config --system --replace-all credential.helper '!f() { /root/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/node /tmp/vscode-remote-containers-c409b92fc381156bbe20a66ef529a2bc19fa6d32.js $*; }; f' || true
+[2022-03-20T19:40:57.515Z] Start: Preparing Extensions
+[2022-03-20T19:40:57.515Z] Start: Run in container: test ! -f '/root/.vscode-server/data/Machine/.installExtensionsMarker' && set -o noclobber && mkdir -p '/root/.vscode-server/data/Machine' && { > '/root/.vscode-server/data/Machine/.installExtensionsMarker' ; } 2> /dev/null
+[2022-03-20T19:40:57.517Z] 
+[2022-03-20T19:40:57.517Z] 
+[2022-03-20T19:40:57.517Z] Exit code 1
+[2022-03-20T19:40:57.517Z] Stop (2 ms): Run in container: test ! -f '/root/.vscode-server/data/Machine/.installExtensionsMarker' && set -o noclobber && mkdir -p '/root/.vscode-server/data/Machine' && { > '/root/.vscode-server/data/Machine/.installExtensionsMarker' ; } 2> /dev/null
+[2022-03-20T19:40:57.520Z] Extensions cache, install extensions: None
+[2022-03-20T19:40:57.520Z] Start: Run in container: test -d /root/.vscode-server/extensionsCache && ls /root/.vscode-server/extensionsCache || true
+[2022-03-20T19:40:57.521Z] 
+[2022-03-20T19:40:57.521Z] 
+[2022-03-20T19:40:57.522Z] Stop (2 ms): Run in container: test -d /root/.vscode-server/extensionsCache && ls /root/.vscode-server/extensionsCache || true
+[2022-03-20T19:40:57.522Z] Extensions cache, copy to remote: None
+[2022-03-20T19:40:57.523Z] Stop (8 ms): Preparing Extensions
+[2022-03-20T19:40:57.523Z] Start: Run in container: for pid in `cd /proc && ls -d [0-9]*`; do { echo $pid ; readlink /proc/$pid/cwd ; readlink /proc/$pid/ns/mnt ; cat /proc/$pid/stat | tr "
+[2022-03-20T19:40:57.654Z] 
+[2022-03-20T19:40:57.655Z] 
+[2022-03-20T19:40:57.655Z] Stop (149 ms): Run in container: cat <<'EOF-/tmp/vscode-remote-containers-c409b92fc381156bbe20a66ef529a2bc19fa6d32.js' >/tmp/vscode-remote-containers-c409b92fc381156bbe20a66ef529a2bc19fa6d32.js
+[2022-03-20T19:40:57.656Z] Start: Run in container: cat <<'EOF-/tmp/vscode-remote-containers-server-c409b92fc381156bbe20a66ef529a2bc19fa6d32.js' >/tmp/vscode-remote-containers-server-c409b92fc381156bbe20a66ef529a2bc19fa6d32.js_1647805257656
+[2022-03-20T19:40:57.660Z] 
+[2022-03-20T19:40:57.661Z] 
+[2022-03-20T19:40:57.661Z] Stop (5 ms): Run in container: cat <<'EOF-/tmp/vscode-remote-containers-server-c409b92fc381156bbe20a66ef529a2bc19fa6d32.js' >/tmp/vscode-remote-containers-server-c409b92fc381156bbe20a66ef529a2bc19fa6d32.js_1647805257656
+[2022-03-20T19:40:57.835Z] Stop (312 ms): Run in container: for pid in `cd /proc && ls -d [0-9]*`; do { echo $pid ; readlink /proc/$pid/cwd ; readlink /proc/$pid/ns/mnt ; cat /proc/$pid/stat | tr "
+[2022-03-20T19:40:57.839Z] Start: Run in container: cat '/root/.vscode-server/data/Machine/.connection-token-f80445acd5a3dadef24aa209168452a3d97cc326' 2>/dev/null || (umask 377 && echo '927075cb-81f5-4038-b443-aa7a2f3da221' >'/root/.vscode-server/data/Machine/.connection-token-f80445acd5a3dadef24aa209168452a3d97cc326-60d930e2-0d79-4944-898f-0a9a4f855e03' && mv -n '/root/.vscode-server/data/Machine/.connection-token-f80445acd5a3dadef24aa209168452a3d97cc326-60d930e2-0d79-4944-898f-0a9a4f855e03' '/root/.vscode-server/data/Machine/.connection-token-f80445acd5a3dadef24aa209168452a3d97cc326' && rm -f '/root/.vscode-server/data/Machine/.connection-token-f80445acd5a3dadef24aa209168452a3d97cc326-60d930e2-0d79-4944-898f-0a9a4f855e03' && cat '/root/.vscode-server/data/Machine/.connection-token-f80445acd5a3dadef24aa209168452a3d97cc326')
+[2022-03-20T19:40:57.842Z] e3a96cf5-99ad-4381-b9b3-14427bea5a41
+[2022-03-20T19:40:57.843Z] 
+[2022-03-20T19:40:57.843Z] Stop (4 ms): Run in container: cat '/root/.vscode-server/data/Machine/.connection-token-f80445acd5a3dadef24aa209168452a3d97cc326' 2>/dev/null || (umask 377 && echo '927075cb-81f5-4038-b443-aa7a2f3da221' >'/root/.vscode-server/data/Machine/.connection-token-f80445acd5a3dadef24aa209168452a3d97cc326-60d930e2-0d79-4944-898f-0a9a4f855e03' && mv -n '/root/.vscode-server/data/Machine/.connection-token-f80445acd5a3dadef24aa209168452a3d97cc326-60d930e2-0d79-4944-898f-0a9a4f855e03' '/root/.vscode-server/data/Machine/.connection-token-f80445acd5a3dadef24aa209168452a3d97cc326' && rm -f '/root/.vscode-server/data/Machine/.connection-token-f80445acd5a3dadef24aa209168452a3d97cc326-60d930e2-0d79-4944-898f-0a9a4f855e03' && cat '/root/.vscode-server/data/Machine/.connection-token-f80445acd5a3dadef24aa209168452a3d97cc326')
+[2022-03-20T19:40:57.844Z] Start: Starting VS Code Server
+[2022-03-20T19:40:57.844Z] Start: Run in Container: /root/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/bin/code-server --log debug --force-disable-user-env --server-data-dir /root/.vscode-server --use-host-proxy --accept-server-license-terms --host 127.0.0.1 --port 0 --connection-token-file /root/.vscode-server/data/Machine/.connection-token-f80445acd5a3dadef24aa209168452a3d97cc326 --extensions-download-dir /root/.vscode-server/extensionsCache --start-server --disable-websocket-compression
+[2022-03-20T19:40:57.857Z] userEnvProbe PATHs:
+Probe:     '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+Container: '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+Merged:    '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+[2022-03-20T19:40:57.934Z] 
+
+*
+* Visual Studio Code Server
+*
+* Reminder: You may only use this software with Visual Studio family products,
+* as described in the license https://aka.ms/vscode-remote/license
+*
+
+Extension host agent listening on 37457
+
+[2022-03-20T19:40:57.935Z] Stop (91 ms): Starting VS Code Server
+[2022-03-20T19:40:57.935Z] Start: Run in container: echo 37457 >'/root/.vscode-server/data/Machine/.devport-f80445acd5a3dadef24aa209168452a3d97cc326'
+[2022-03-20T19:40:57.938Z] 
+[2022-03-20T19:40:57.939Z] 
+[2022-03-20T19:40:57.939Z] Stop (4 ms): Run in container: echo 37457 >'/root/.vscode-server/data/Machine/.devport-f80445acd5a3dadef24aa209168452a3d97cc326'
+[2022-03-20T19:40:57.940Z] Port forwarding for container port 37457 starts listening on local port.
+[2022-03-20T19:40:57.942Z] Port forwarding local port 37457 to container port 37457
+[2022-03-20T19:40:57.942Z] Start: Run in container: mkdir -p '/root/.vscode-server/data/Machine' && CONTENT="$(cat '/root/.vscode-server/data/Machine/.onCreateCommandMarker' 2>/dev/null || echo ENOENT)" && [ "${CONTENT:-2022-03-20T18:54:05.191619232Z}" != '2022-03-20T18:54:05.191619232Z' ] && echo '2022-03-20T18:54:05.191619232Z' > '/root/.vscode-server/data/Machine/.onCreateCommandMarker'
+[2022-03-20T19:40:57.947Z] 
+[2022-03-20T19:40:57.947Z] 
+[2022-03-20T19:40:57.947Z] Exit code 1
+[2022-03-20T19:40:57.948Z] Stop (6 ms): Run in container: mkdir -p '/root/.vscode-server/data/Machine' && CONTENT="$(cat '/root/.vscode-server/data/Machine/.onCreateCommandMarker' 2>/dev/null || echo ENOENT)" && [ "${CONTENT:-2022-03-20T18:54:05.191619232Z}" != '2022-03-20T18:54:05.191619232Z' ] && echo '2022-03-20T18:54:05.191619232Z' > '/root/.vscode-server/data/Machine/.onCreateCommandMarker'
+[2022-03-20T19:40:57.948Z] Start: Run in container: mkdir -p '/root/.vscode-server/data/Machine' && CONTENT="$(cat '/root/.vscode-server/data/Machine/.updateContentCommandMarker' 2>/dev/null || echo ENOENT)" && [ "${CONTENT:-2022-03-20T18:54:05.191619232Z}" != '2022-03-20T18:54:05.191619232Z' ] && echo '2022-03-20T18:54:05.191619232Z' > '/root/.vscode-server/data/Machine/.updateContentCommandMarker'
+[2022-03-20T19:40:57.954Z] 
+[2022-03-20T19:40:57.955Z] 
+[2022-03-20T19:40:57.955Z] Exit code 1
+[2022-03-20T19:40:57.955Z] Stop (7 ms): Run in container: mkdir -p '/root/.vscode-server/data/Machine' && CONTENT="$(cat '/root/.vscode-server/data/Machine/.updateContentCommandMarker' 2>/dev/null || echo ENOENT)" && [ "${CONTENT:-2022-03-20T18:54:05.191619232Z}" != '2022-03-20T18:54:05.191619232Z' ] && echo '2022-03-20T18:54:05.191619232Z' > '/root/.vscode-server/data/Machine/.updateContentCommandMarker'
+[2022-03-20T19:40:57.955Z] Start: Run in container: mkdir -p '/root/.vscode-server/data/Machine' && CONTENT="$(cat '/root/.vscode-server/data/Machine/.postCreateCommandMarker' 2>/dev/null || echo ENOENT)" && [ "${CONTENT:-2022-03-20T18:54:05.191619232Z}" != '2022-03-20T18:54:05.191619232Z' ] && echo '2022-03-20T18:54:05.191619232Z' > '/root/.vscode-server/data/Machine/.postCreateCommandMarker'
+[2022-03-20T19:40:57.956Z] Start: Run in container: /bin/sh -c # Watch installed extensions
+[2022-03-20T19:40:57.957Z] Start: Run in container: /bin/sh -c # Watch machine settings
+[2022-03-20T19:40:57.981Z] Stop (1042 ms): Resolving Remote
+[2022-03-20T19:40:57.985Z] 
+[2022-03-20T19:40:57.985Z] 
+[2022-03-20T19:40:57.985Z] Exit code 1
+[2022-03-20T19:40:57.986Z] Stop (31 ms): Run in container: mkdir -p '/root/.vscode-server/data/Machine' && CONTENT="$(cat '/root/.vscode-server/data/Machine/.postCreateCommandMarker' 2>/dev/null || echo ENOENT)" && [ "${CONTENT:-2022-03-20T18:54:05.191619232Z}" != '2022-03-20T18:54:05.191619232Z' ] && echo '2022-03-20T18:54:05.191619232Z' > '/root/.vscode-server/data/Machine/.postCreateCommandMarker'
+[2022-03-20T19:40:57.992Z] Start: Run in container: command -v git >/dev/null 2>&1 && git config --global --replace-all credential.helper '!f() { /root/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/node /tmp/vscode-remote-containers-c409b92fc381156bbe20a66ef529a2bc19fa6d32.js $*; }; f' || true
+[2022-03-20T19:40:58.004Z] 
+[2022-03-20T19:40:58.004Z] 
+[2022-03-20T19:40:58.005Z] Stop (13 ms): Run in container: command -v git >/dev/null 2>&1 && git config --global --replace-all credential.helper '!f() { /root/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/node /tmp/vscode-remote-containers-c409b92fc381156bbe20a66ef529a2bc19fa6d32.js $*; }; f' || true
+[2022-03-20T19:40:58.005Z] Start: Run in container: mkdir -p '/root/.vscode-server/data/Machine' && CONTENT="$(cat '/root/.vscode-server/data/Machine/.postStartCommandMarker' 2>/dev/null || echo ENOENT)" && [ "${CONTENT:-2022-03-20T19:10:19.669381629Z}" != '2022-03-20T19:10:19.669381629Z' ] && echo '2022-03-20T19:10:19.669381629Z' > '/root/.vscode-server/data/Machine/.postStartCommandMarker'
+[2022-03-20T19:40:58.013Z] Port forwarding connection from 33420 > 37457 > 37457 in the container.
+[2022-03-20T19:40:58.015Z] Start: Run in container: /root/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/node -e 
+[2022-03-20T19:40:58.040Z] 
+[2022-03-20T19:40:58.041Z] 
+[2022-03-20T19:40:58.041Z] Exit code 1
+[2022-03-20T19:40:58.041Z] Stop (36 ms): Run in container: mkdir -p '/root/.vscode-server/data/Machine' && CONTENT="$(cat '/root/.vscode-server/data/Machine/.postStartCommandMarker' 2>/dev/null || echo ENOENT)" && [ "${CONTENT:-2022-03-20T19:10:19.669381629Z}" != '2022-03-20T19:10:19.669381629Z' ] && echo '2022-03-20T19:10:19.669381629Z' > '/root/.vscode-server/data/Machine/.postStartCommandMarker'
+[2022-03-20T19:40:58.348Z] [19:40:58] Extension host agent started.
+[2022-03-20T19:40:58.412Z] Port forwarding connection from 33424 > 37457 > 37457 in the container.
+[2022-03-20T19:40:58.413Z] Start: Run in container: /root/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/node -e 
+[2022-03-20T19:40:58.457Z] [19:40:58] [127.0.0.1][bb7dcd12][ManagementConnection] New connection established.
+[2022-03-20T19:40:58.874Z] [19:40:58] [127.0.0.1][ae46c959][ExtensionHostConnection] New connection established.
+[2022-03-20T19:40:58.898Z] [19:40:58] [127.0.0.1][ae46c959][ExtensionHostConnection] <5671> Launched Extension Host Process.
+[2022-03-20T19:41:07.527Z] Extensions cache, remote removals: None
+[2022-03-20T19:41:17.045Z] Start: Run: docker version --format {{.Server.APIVersion}}
+[2022-03-20T19:41:17.115Z] Stop (70 ms): Run: docker version --format {{.Server.APIVersion}}
+[2022-03-20T19:41:17.116Z] 1.41
+[2022-03-20T19:41:17.120Z] Start: Run: docker -v
+[2022-03-20T19:41:17.182Z] Stop (62 ms): Run: docker -v
+[2022-03-20T19:41:17.183Z] Start: Run: docker events --format {{json .}} --filter event=create --filter event=destroy --filter event=die --filter event=health-status --filter event=kill --filter event=pause --filter event=rename --filter event=resize --filter event=restart --filter event=start --filter event=stop --filter event=unpause --filter event=update --filter event=exec_create
+[2022-03-20T19:41:17.198Z] Start: Run: docker ps -q -a
+[2022-03-20T19:41:17.283Z] Start: Run: docker version --format {{.Server.APIVersion}}
+[2022-03-20T19:41:17.297Z] Stop (99 ms): Run: docker ps -q -a
+[2022-03-20T19:41:17.306Z] Start: Run: docker inspect --type container a4e6ae3c3b3e 20425156fa0c ceb08273cecc 0a22b9ebd008 19ab51f6e970 8acdfc5a85c5 bd5d10fae6f4 ff31819f8a8e b407cc855577
+[2022-03-20T19:41:17.373Z] Stop (90 ms): Run: docker version --format {{.Server.APIVersion}}
+[2022-03-20T19:41:17.374Z] 1.41
+[2022-03-20T19:41:17.376Z] Start: Run: docker -v
+[2022-03-20T19:41:17.392Z] Stop (86 ms): Run: docker inspect --type container a4e6ae3c3b3e 20425156fa0c ceb08273cecc 0a22b9ebd008 19ab51f6e970 8acdfc5a85c5 bd5d10fae6f4 ff31819f8a8e b407cc855577
+[2022-03-20T19:41:17.395Z] Start: Run: docker inspect --type container 20425156fa0c6610fe239598dae76cb2b0c3448831e0cd2479e17e5f44a3ddda
+[2022-03-20T19:41:17.438Z] Stop (62 ms): Run: docker -v
+[2022-03-20T19:41:17.439Z] Start: Run: docker events --format {{json .}} --filter event=destroy --filter event=die --filter event=kill --filter event=create --filter event=rename --filter event=resize --filter event=restart --filter event=start --filter event=stop --filter event=unpause --filter event=prune
+[2022-03-20T19:41:17.449Z] Start: Run: docker volume ls -q
+[2022-03-20T19:41:17.472Z] Stop (77 ms): Run: docker inspect --type container 20425156fa0c6610fe239598dae76cb2b0c3448831e0cd2479e17e5f44a3ddda
+[2022-03-20T19:41:17.491Z] Start: Run: docker version --format {{.Server.APIVersion}}
+[2022-03-20T19:41:17.537Z] Stop (88 ms): Run: docker volume ls -q
+[2022-03-20T19:41:17.538Z] Start: Run: docker inspect --type volume 2a60b6e149025baed1e9d8d3e6dedffc2e330ba4515b6a5b0dcfea3d5157b1e4 55b1af8e8fd4e03f124f76d1333ffc68321ca73e801ff892f47364990b0bd21c 761ab15295f845d2fa9aad0fb6c5c72d2d08820c080c17d8c653cd64953b954a 112566091c7b506605675aa51fca7a3ed68051205f96979400f51cc5cc96f13c ccb84419eb120a7bc14d53fc65986ee7db979e7a101a4029cc0cb69d5887c132 d0240c18272d0bc747966ec15231652c0c0fd7d8b82b3e516405f20b2210faac projetannuel_caddy_config projetannuel_caddy_data projetannuel_db_data projetannuel_php_socket
+[2022-03-20T19:41:17.567Z] Stop (76 ms): Run: docker version --format {{.Server.APIVersion}}
+[2022-03-20T19:41:17.568Z] 1.41
+[2022-03-20T19:41:17.610Z] Stop (72 ms): Run: docker inspect --type volume 2a60b6e149025baed1e9d8d3e6dedffc2e330ba4515b6a5b0dcfea3d5157b1e4 55b1af8e8fd4e03f124f76d1333ffc68321ca73e801ff892f47364990b0bd21c 761ab15295f845d2fa9aad0fb6c5c72d2d08820c080c17d8c653cd64953b954a 112566091c7b506605675aa51fca7a3ed68051205f96979400f51cc5cc96f13c ccb84419eb120a7bc14d53fc65986ee7db979e7a101a4029cc0cb69d5887c132 d0240c18272d0bc747966ec15231652c0c0fd7d8b82b3e516405f20b2210faac projetannuel_caddy_config projetannuel_caddy_data projetannuel_db_data projetannuel_php_socket
+[2022-03-20T19:41:17.662Z] Start: Run: docker inspect --type container 20425156fa0c6610fe239598dae76cb2b0c3448831e0cd2479e17e5f44a3ddda
+[2022-03-20T19:41:17.727Z] Stop (65 ms): Run: docker inspect --type container 20425156fa0c6610fe239598dae76cb2b0c3448831e0cd2479e17e5f44a3ddda
+[2022-03-20T19:41:17.730Z] Start: Run: docker inspect --type container 20425156fa0c6610fe239598dae76cb2b0c3448831e0cd2479e17e5f44a3ddda
+[2022-03-20T19:41:17.793Z] Stop (63 ms): Run: docker inspect --type container 20425156fa0c6610fe239598dae76cb2b0c3448831e0cd2479e17e5f44a3ddda
+[2022-03-20T19:41:30.806Z] Start: Run: docker version --format {{.Server.APIVersion}}
+[2022-03-20T19:41:30.875Z] Stop (69 ms): Run: docker version --format {{.Server.APIVersion}}
+[2022-03-20T19:41:30.876Z] 1.41
+[2022-03-20T19:41:58.471Z] Stop (60515 ms): Run in container: /bin/sh -c # Watch installed extensions
+[2022-03-20T19:41:58.473Z] Start: Run in container: /bin/sh -c # Watch installed extensions
+[2022-03-20T19:41:58.827Z] Stop (60870 ms): Run in container: /bin/sh -c # Watch machine settings
+[2022-03-20T19:41:58.828Z] Start: Run in container: /bin/sh -c # Watch machine settings

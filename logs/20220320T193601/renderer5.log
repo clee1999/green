@@ -1,0 +1,16 @@
+[2022-03-20 19:40:25.481] [renderer5] [info] Invoking resolveAuthority(attached-container)
+[2022-03-20 19:40:25.729] [renderer5] [info] IExtensionHostStarter.start() took 89 ms.
+[2022-03-20 19:40:26.105] [renderer5] [error] [Extension Host] (node:133190) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(Use `code --trace-deprecation ...` to show where the warning was created)
+[2022-03-20 19:40:26.147] [renderer5] [critical] Extension 'ms-vscode-remote.remote-ssh' appears in product.json but enables LESS API proposals than the extension wants.
+package.json (LOSES): resolvers, terminalDataWriteEvent, contribViewsRemote, telemetry
+product.json (WINS): resolvers, terminalDataWriteEvent, contribViewsRemote
+[2022-03-20 19:40:27.419] [renderer5] [info] resolveAuthority(attached-container) returned '127.0.0.1:43987' after 1938 ms
+[2022-03-20 19:40:56.209] [renderer5] [info] IExtensionHostStarter.start() took 38 ms.
+[2022-03-20 19:40:56.673] [renderer5] [error] [Extension Host] (node:134726) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(Use `code --trace-deprecation ...` to show where the warning was created)
+[2022-03-20 19:40:56.722] [renderer5] [critical] Extension 'ms-vscode-remote.remote-ssh' appears in product.json but enables LESS API proposals than the extension wants.
+package.json (LOSES): resolvers, terminalDataWriteEvent, contribViewsRemote, telemetry
+product.json (WINS): resolvers, terminalDataWriteEvent, contribViewsRemote
+[2022-03-20 19:40:56.936] [renderer5] [info] Invoking resolveAuthority(attached-container)
+[2022-03-20 19:40:58.007] [renderer5] [info] resolveAuthority(attached-container) returned '127.0.0.1:37457' after 1070 ms

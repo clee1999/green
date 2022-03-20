@@ -4,9 +4,12 @@ namespace App\Controller;
 
 use App\Repository\VilleRepository;
 use App\Repository\AccesVilleRepository;
+use App\Entity\AccesVille;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class HomepageController extends AbstractController
 {
@@ -34,65 +37,92 @@ class HomepageController extends AbstractController
 
     #[Route('/listDatatable', name: 'listDatatable')]
 
-    public function listDatatablesAction(Request $request): JsonResponse
+    public function listDatatablesAction(Request $request)
     {
-        if ($request->getMethod() == 'POST') {
-            $draw = intval($request->request->get('draw'));
-            $start = $request->request->get('start');
-            $length = $request->request->get('length');
-            $search = $request->request->get('search');
-            $orders = $request->request->get('order');
-            $columns = $request->request->get('columns');
-        } else // If the request is not a POST one, die hard
-        {
-            die;
-        }
+        //dump($request);
+        ini_set('memory_limit', '-1');
+        // $draw = intval($request->request->get('draw'));
+        // $start = $request->request->get('start');
+        // $length = $request->request->get('length');
+        // $search = $request->request->get('search');
+        // $orders = $request->request->get('order');
+        // $columns = $request->request->get('columns');
+        // foreach ($orders as $key => $order)
+        // {
+        //     // Orders does not contain the name of the column, but its number,
+        //     // so add the name so we can handle it just like the $columns array
+        //     $orders[$key]['name'] = $columns[$order['column']]['name'];
+        // }
+        // $result = $this->getDoctrine()->getRepository(AccesVille::class)->findAll();
+        // $result = array_slice($result, 0, 10);
 
-        // Process Parameters
 
-        // Orders
-        foreach ($orders as $key => $order) {
-            // Orders does not contain the name of the column, but its number,
-            // so add the name so we can handle it just like the $columns array
-            $orders[$key]['name'] = $columns[$order['column']]['name'];
-        }
 
-        // Further filtering can be done in the Repository by passing necessary arguments
-        $otherConditions = "array or whatever is needed";
 
-        // Get results from the Repository
-        $results = $this->repository->getRequiredDTData($start, $length, $orders, $search, $columns, $otherConditions = null);
-    }
+
+
+
+
+
+
+        // dump($request);
+        $length = $request->get('length'); 
+        $length = $length && ($length!=-1)?$length:0; 
+  
+        $start = $request->get('start'); 
+        $start = $length?($start && ($start!=-1)?$start:0)/$length:0; 
+  
+        $search = $request->get('search'); 
+        $filters = [ 
+            'query' => @$search['value'] 
+        ]; 
+
+
+
+  
+        $results = $this->getDoctrine()->getRepository(AccesVille::class)->findSearch( 
+            $filters, $start, $length 
+        ); 
+        // foreach($results as $result => $key)
+        // {
+        //     $results[$key] = json_encode($result);
+        // }
+        // $results = json_encode($results);
+        dump($results);
+        $output = [
+            // 'data' => array_slice($results,$start,$length),
+            'data' => $results,
+            'recordsFiltered' => count($this->getDoctrine()->getRepository(AccesVille::class)->findSearch($filters, 0, false)), 
+            'recordsTotal' => count($this->getDoctrine()->getRepository(AccesVille::class)->findSearch(array(), 0, false)),
+            'iTotalRecords' => count($this->getDoctrine()->getRepository(AccesVille::class)->findSearch($filters, 0, false)), 
+            'iTotalDisplayRecords' => count($this->getDoctrine()->getRepository(AccesVille::class)->findSearch($filters, 0, false)), 
+            'draw' => $request->get('draw'),
+            'start' => $request->get('start'),
+            'length' => $request->get('length'),
+        ]; 
+
+        
+        dump($output);
+        // dump($output);
+  
+        return new JsonResponse($output); 
+    } 
+
+
+
+
 
     public function getRequiredDTData($start, $length, $orders, $search, $columns, $otherConditions)
     {
         // Create Main Query
-        $query = $this->createQueryBuilder('town');
+        $query = $this->createQueryBuilder('accesville');
 
         // Create Count Query
-        $countQuery = $this->createQueryBuilder('town');
-        $countQuery->select('COUNT(town)');
+        $countQuery = $this->createQueryBuilder('accesvill');
+        $countQuery->select('COUNT(id)');
 
         // Create inner joins
-        $query
-            ->join('town.department', 'department')
-            ->join('department.region', 'region');
-
-        $countQuery
-            ->join('town.department', 'department')
-            ->join('department.region', 'region');
-
-        // Other conditions than the ones sent by the Ajax call ?
-        if ($otherConditions === null) {
-            // No
-            // However, add a "always true" condition to keep an uniform treatment in all cases
-            $query->where("1=1");
-            $countQuery->where("1=1");
-        } else {
-            // Add condition
-            $query->where($otherConditions);
-            $countQuery->where($otherConditions);
-        }
+        
 
         // Fields Search
         foreach ($columns as $key => $column) {

@@ -1,0 +1,40 @@
+[2022-03-20T19:37:18.182Z] Start: Run: docker version --format {{.Server.APIVersion}}
+[2022-03-20T19:37:18.182Z] Remote-Containers 0.224.3 in VS Code 1.64.2 (f80445acd5a3dadef24aa209168452a3d97cc326).
+[2022-03-20T19:37:18.265Z] Stop (83 ms): Run: docker version --format {{.Server.APIVersion}}
+[2022-03-20T19:37:18.265Z] 1.41
+[2022-03-20T19:37:18.271Z] Start: Run: docker ps -q
+[2022-03-20T19:37:18.341Z] Stop (70 ms): Run: docker ps -q
+[2022-03-20T19:37:18.342Z] Start: Run: docker inspect --type container a4e6ae3c3b3e 20425156fa0c ceb08273cecc
+[2022-03-20T19:37:18.531Z] Stop (189 ms): Run: docker inspect --type container a4e6ae3c3b3e 20425156fa0c ceb08273cecc
+[2022-03-20T19:37:27.627Z] Start: Run: docker version --format {{.Server.APIVersion}}
+[2022-03-20T19:37:27.716Z] Stop (89 ms): Run: docker version --format {{.Server.APIVersion}}
+[2022-03-20T19:37:27.717Z] 1.41
+[2022-03-20T19:37:27.718Z] Start: Run: docker ps -q
+[2022-03-20T19:37:27.776Z] Stop (58 ms): Run: docker ps -q
+[2022-03-20T19:37:27.776Z] Start: Run: docker inspect --type container a4e6ae3c3b3e 20425156fa0c ceb08273cecc
+[2022-03-20T19:37:27.836Z] Stop (60 ms): Run: docker inspect --type container a4e6ae3c3b3e 20425156fa0c ceb08273cecc
+[2022-03-20T19:38:50.034Z] Start: Run: docker version --format {{.Server.APIVersion}}
+[2022-03-20T19:38:50.112Z] Stop (78 ms): Run: docker version --format {{.Server.APIVersion}}
+[2022-03-20T19:38:50.113Z] 1.41
+[2022-03-20T19:38:50.115Z] Start: Run: docker -v
+[2022-03-20T19:38:50.193Z] Stop (78 ms): Run: docker -v
+[2022-03-20T19:38:50.194Z] Start: Run: docker events --format {{json .}} --filter event=create --filter event=destroy --filter event=die --filter event=health-status --filter event=kill --filter event=pause --filter event=rename --filter event=resize --filter event=restart --filter event=start --filter event=stop --filter event=unpause --filter event=update --filter event=exec_create
+[2022-03-20T19:38:50.213Z] Start: Run: docker ps -q -a
+[2022-03-20T19:38:50.259Z] Start: Run: docker version --format {{.Server.APIVersion}}
+[2022-03-20T19:38:50.336Z] Stop (123 ms): Run: docker ps -q -a
+[2022-03-20T19:38:50.365Z] Start: Run: docker inspect --type container a4e6ae3c3b3e 20425156fa0c ceb08273cecc 0a22b9ebd008 19ab51f6e970 8acdfc5a85c5 bd5d10fae6f4 ff31819f8a8e b407cc855577
+[2022-03-20T19:38:50.388Z] Stop (129 ms): Run: docker version --format {{.Server.APIVersion}}
+[2022-03-20T19:38:50.389Z] 1.41
+[2022-03-20T19:38:50.390Z] Start: Run: docker -v
+[2022-03-20T19:38:50.506Z] Stop (116 ms): Run: docker -v
+[2022-03-20T19:38:50.506Z] Start: Run: docker events --format {{json .}} --filter event=destroy --filter event=die --filter event=kill --filter event=create --filter event=rename --filter event=resize --filter event=restart --filter event=start --filter event=stop --filter event=unpause --filter event=prune
+[2022-03-20T19:38:50.527Z] Start: Run: docker volume ls -q
+[2022-03-20T19:38:50.545Z] Stop (180 ms): Run: docker inspect --type container a4e6ae3c3b3e 20425156fa0c ceb08273cecc 0a22b9ebd008 19ab51f6e970 8acdfc5a85c5 bd5d10fae6f4 ff31819f8a8e b407cc855577
+[2022-03-20T19:38:50.627Z] Stop (100 ms): Run: docker volume ls -q
+[2022-03-20T19:38:50.627Z] Start: Run: docker inspect --type volume 2a60b6e149025baed1e9d8d3e6dedffc2e330ba4515b6a5b0dcfea3d5157b1e4 55b1af8e8fd4e03f124f76d1333ffc68321ca73e801ff892f47364990b0bd21c 761ab15295f845d2fa9aad0fb6c5c72d2d08820c080c17d8c653cd64953b954a 112566091c7b506605675aa51fca7a3ed68051205f96979400f51cc5cc96f13c ccb84419eb120a7bc14d53fc65986ee7db979e7a101a4029cc0cb69d5887c132 d0240c18272d0bc747966ec15231652c0c0fd7d8b82b3e516405f20b2210faac projetannuel_caddy_config projetannuel_caddy_data projetannuel_db_data projetannuel_php_socket
+[2022-03-20T19:38:50.714Z] Stop (87 ms): Run: docker inspect --type volume 2a60b6e149025baed1e9d8d3e6dedffc2e330ba4515b6a5b0dcfea3d5157b1e4 55b1af8e8fd4e03f124f76d1333ffc68321ca73e801ff892f47364990b0bd21c 761ab15295f845d2fa9aad0fb6c5c72d2d08820c080c17d8c653cd64953b954a 112566091c7b506605675aa51fca7a3ed68051205f96979400f51cc5cc96f13c ccb84419eb120a7bc14d53fc65986ee7db979e7a101a4029cc0cb69d5887c132 d0240c18272d0bc747966ec15231652c0c0fd7d8b82b3e516405f20b2210faac projetannuel_caddy_config projetannuel_caddy_data projetannuel_db_data projetannuel_php_socket
+[2022-03-20T19:38:56.705Z] Start: Run: docker inspect --type container 20425156fa0c6610fe239598dae76cb2b0c3448831e0cd2479e17e5f44a3ddda
+[2022-03-20T19:38:56.890Z] Stop (185 ms): Run: docker inspect --type container 20425156fa0c6610fe239598dae76cb2b0c3448831e0cd2479e17e5f44a3ddda
+[2022-03-20T19:38:56.891Z] Start: Run: docker version --format {{.Server.APIVersion}}
+[2022-03-20T19:38:56.979Z] Stop (88 ms): Run: docker version --format {{.Server.APIVersion}}
+[2022-03-20T19:38:56.980Z] 1.41
