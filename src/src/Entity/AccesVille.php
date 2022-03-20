@@ -4,11 +4,13 @@ namespace App\Entity;
 
 use App\Repository\AccesVilleRepository;
 use Doctrine\ORM\Mapping as ORM;
+use JsonSerializable;
 
 /**
  * @ORM\Entity(repositoryClass=AccesVilleRepository::class)
  */
-class AccesVille
+class AccesVille implements JsonSerializable
+
 {
     /**
      * @ORM\Id
@@ -76,6 +78,26 @@ class AccesVille
      * @ORM\Column(type="integer", nullable=true)
      */
     private $global_competence;
+
+
+    public function jsonSerialize()
+    {
+        return array(
+            'id' => $this->id,
+            'nom'=> $this->nom,
+            'code_iris'=> $this->code_iris,
+            'classement_score_global'=> $this->classement_score_global,
+            'nom_iris'=> $this->nom_iris,
+            'logpopulationin'=> $this->population,
+            'score_global'=> $this->score_global,
+            'acces_numerique'=> $this->acces_numerique,
+            'acces_information'=> $this->acces_information,
+            'competences_administrative'=> $this->competences_administrative,
+            'competence_numerique_scolaire'=> $this->competence_numerique_scolaire,
+            'global_acces'=> $this->global_acces,
+            'global_competence'=> $this->global_competence,
+        );
+    }
 
     public function getId(): ?int
     {
@@ -225,4 +247,5 @@ class AccesVille
 
         return $this;
     }
+
 }

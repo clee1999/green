@@ -21,6 +21,35 @@ class AccesVilleRepository extends ServiceEntityRepository
         parent::__construct($registry, AccesVille::class);
     }
 
+    public function findSearch($data, $page = 0, $max = NULL, $getResult = true)
+    {
+        $qb = $this->_em->createQueryBuilder();
+        $query = isset($data['query']) && $data['query']?$data['query']:null;
+
+        $qb
+            ->select('u')
+            ->from(AccesVille::class, 'u')
+        ;
+
+        if ($query) {
+            $qb
+                ->andWhere('u.name like :query')
+                ->setParameter('query', "%".$query."%")
+            ;
+        }
+
+        if ($max) {
+            $preparedQuery = $qb->getQuery()
+                ->setMaxResults($max)
+                ->setFirstResult($page * $max)
+            ;
+        } else {
+            $preparedQuery = $qb->getQuery();
+        }
+
+        return $getResult?$preparedQuery->getResult():$preparedQuery;
+    }
+
     // /**
     //  * @return AccesVille[] Returns an array of AccesVille objects
     //  */
@@ -165,4 +194,6 @@ class AccesVilleRepository extends ServiceEntityRepository
         $stmt->execute(array('reg' => $reg));
         return $stmt->fetchOne();
     }
+
 }
+

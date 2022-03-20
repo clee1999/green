@@ -3,26 +3,27 @@
 {% block title %}Hello HomepageController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper {
-        /*margin: 1em auto;*/
-        /*max-width: 800px;*/
-        width: 95%;
-        font: 18px/1.5 sans-serif;
-    }
 
-    .example-wrapper code {
-        background: #F5F5F5;
-        padding: 2px 6px;
-    }
-</style>
-<p>test avg acces information pour corse
-    {{test}} <br>
-    ville all indice
-    {{testarray|join(',')}}</p>
-<div class="example-wrapper">
-    <table id="example" class="display" style="width:100%">
-        <thead>
+    <style>
+        .example-wrapper {
+            /*margin: 1em auto;*/
+            /*max-width: 800px;*/
+            width: 95%;
+            font: 18px/1.5 sans-serif;
+        }
+
+        .example-wrapper code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+        }
+    </style>
+    <p>test avg acces information pour corse
+        {{test}} <br>
+        ville all indice
+        {{testarray|join(',')}}</p>
+    <div class="example-wrapper">
+        <table id="table" class="display" style="width:100%">
+
             <tr>
                 <th>Id</th>
                 <th>Nom</th>
@@ -38,11 +39,11 @@
                 <th>Global Access</th>
                 <th>Global Compétences</th>
             </tr>
-        </thead>
-        <tbody>
-        
-        </tbody>
-        <tfoot>
+            </thead>
+            <tbody>
+
+            </tbody>
+            <tfoot>
             <tr>
                 <th>Id</th>
                 <th>Nom</th>
@@ -58,65 +59,85 @@
                 <th>Global Access</th>
                 <th>Global Compétences</th>
             </tr>
-        </tfoot>
-    </table>
-</div>
+            </tfoot>
+        </table>
+    </div>
 {% endblock %}
 {% block javascripts %}
-{{ parent() }}
-<script>
-    $(document).ready(function () {
-        $('#example').DataTable({
-            "columnDefs": [
-            { "name": "id",   "targets": 0 },
-            { "name": "nom",   "targets": 1 },
-            { "name": "code Iris",  "targets": 3 },
-            { "name": "classement",  "targets": 4 },
-            { "name": "population",   "targets": 5 },
-            { "name": "score global",   "targets": 6 },
-            { "name": "acces interface numerique",  "targets": 7 },
-            { "name": "acces information",  "targets": 8 },
-            { "name": "competences administratives",   "targets": 9 },
-            { "name": "competences numeriques scolaire",   "targets": 9 },
-            { "name": "global access",  "targets": 10 },
-            { "name": "global competence",  "targets": 11 },
-            ],
-             "ajax": {
-            "url": "{{ path('listDatatable') }}",
-            "type": "POST"
-        },
-        
-        "processing": true,
-        "serverSide": true,
-         "paging" : true,
-        "info" : true, 
-        "searching": true,
-        "pageLength": 10,
-        "order": [[2, 'asc']],
-        initComplete: function () {
-            this.api().columns().every(function () {
-                var column = this;
-                var select = $('<select><option value=""></option></select>')
-                    .appendTo($(column.footer()).empty())
-                    .on('change', function () {
-                        var val = $.fn.dataTable.util.escapeRegex(
-                            $(this).val()
-                        );
+    {{ parent() }}
+    <script>
+        $(document).ready(function () {
+            var table = $('#table').DataTable({
+                "columnDefs": [
+                    { "name": "id",   "targets": 0 },
+                    { "name": "nom",   "targets": 1 },
+                    { "name": "code Iris",  "targets": 3 },
+                    { "name": "classement",  "targets": 4 },
+                    { "name": "population",   "targets": 5 },
+                    { "name": "score global",   "targets": 6 },
+                    { "name": "acces interface numerique",  "targets": 7 },
+                    { "name": "acces information",  "targets": 8 },
+                    { "name": "competences administratives",   "targets": 9 },
+                    { "name": "competences numeriques scolaire",   "targets": 9 },
+                    { "name": "global access",  "targets": 10 },
+                    { "name": "global competence",  "targets": 11 },
+                ],
 
-                        column
-                            .search(val ? '^' + val + '$' : '', true, false)
-                            .draw();
+
+
+                "ajax": {
+                    "url": '{{ path('listDatatable') }}',
+
+                },
+                "dataSrc": "data",
+// "columns": [
+//                 { "data": "id" },
+//                 { "data": "code Iris" },
+//                 { "data": "classement"},
+//                 { "data": "population"},
+//                 { "data": "score global" },
+//                 { "data": "acces interface numerique" },
+//                 { "data": "acces information" },
+//                 { "data": "competences administratives" },
+//                 { "data": "competences numeriques scolaire" },
+//                 { "data": "global access"},
+//                 { "data": "global competence" },
+//                 ],
+
+                "processing": true,
+                "serverSide": true,
+                "paging" : true,
+                "info" : true,
+                "searching": true,
+                "pageLength": 10,
+                "order": [[2, 'asc']],
+                initComplete: function () {
+                    this.api().columns().every(function () {
+                        var column = this;
+                        var select = $('<select><option value=""></option></select>')
+                            .appendTo($(column.footer()).empty())
+                            .on('change', function () {
+                                var val = $.fn.dataTable.util.escapeRegex(
+                                    $(this).val()
+                                );
+
+                                column
+                                    .search(val ? '^' + val + '$' : '', true, false)
+                                    .draw();
+                            });
+
+                        column.data().unique().sort().each(function (d, j) {
+                            if (column.search() === '^' + d + '$') {
+                                select.append('<option value="' + d + '" selected="selected">' + d + '</option>')
+                            } else {
+                                select.append('<option value="' + d + '">' + d + '</option>')
+                            }
+                        });
                     });
-
-                column.data().unique().sort().each(function (d, j) {
-                    if (column.search() === '^' + d + '$') {
-                        select.append('<option value="' + d + '" selected="selected">' + d + '</option>')
-                    } else {
-                        select.append('<option value="' + d + '">' + d + '</option>')
-                    }
-                });
+                }
             });
-        }
-        });
-    });</script>
+            // Apply the search
+            pos = 1;
+
+        });</script>
 {% endblock %}
