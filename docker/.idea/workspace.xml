@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1769a13f-80da-4c32-92f5-7dea6a4465b8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../src/src/Controller/HomepageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../src/src/Controller/HomepageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/templates/homepage/homepage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../src/templates/homepage/homepage.html.twig" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="26YpqGhvlr8nNlQj5EWc3S7aR0P" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
+    <property name="database.data.extractors.current.id" value="CSV-Groovy.csv.groovy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1769a13f-80da-4c32-92f5-7dea6a4465b8" name="Default Changelist" comment="" />
+      <created>1647610563236</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647610563236</updated>
+      <workItem from="1647610565116" duration="4555000" />
+      <workItem from="1647785432184" duration="31000" />
+      <workItem from="1647811580381" duration="127000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="604" y="149" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1647616259100">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="604" y="149" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1647616259100" />
+    <state x="35" y="131" width="862" height="682" key="com.intellij.database.dbimport.ImportDialog" timestamp="1647722725346">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="26" y="109" width="862" height="682" key="com.intellij.database.dbimport.ImportDialog/0.0.1440.900@0.0.1440.900" timestamp="1647612653559" />
+    <state x="35" y="131" key="com.intellij.database.dbimport.ImportDialog/1920.25.1440.875/0.0.1920.1080@0.0.1920.1080" timestamp="1647722725346" />
+  </component>
+</project>
