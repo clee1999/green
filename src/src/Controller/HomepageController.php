@@ -127,7 +127,6 @@ class HomepageController extends AbstractController
         // Create inner joins
 
 
-
         // Fields Search
         foreach ($columns as $key => $column) {
             if ($column['search']['value'] != '') {
@@ -137,20 +136,24 @@ class HomepageController extends AbstractController
 
                 // $column['name'] is the name of the column as sent by the JS
                 switch ($column['name']) {
-                    case 'name': {
+                    case 'name':
+                    {
 
                         $searchQuery = 'town.name LIKE \'%' . $searchItem . '%\'';
                         break;
                     }
-                    case 'postalCode': {
+                    case 'postalCode':
+                    {
                         $searchQuery = 'town.postalCode LIKE \'%' . $searchItem . '%\'';
                         break;
                     }
-                    case 'department': {
+                    case 'department':
+                    {
                         $searchQuery = 'department.name LIKE \'%' . $searchItem . '%\'';
                         break;
                     }
-                    case 'region': {
+                    case 'region':
+                    {
                         $searchQuery = 'region.name LIKE \'%' . $searchItem . '%\'';
                         break;
                     }
@@ -174,20 +177,24 @@ class HomepageController extends AbstractController
                 $orderColumn = null;
 
                 switch ($order['name']) {
-                    case 'name': {
+                    case 'name':
+                    {
 
                         $orderColumn = 'town.name';
                         break;
                     }
-                    case 'postalCode': {
+                    case 'postalCode':
+                    {
                         $orderColumn = 'town.postalCode';
                         break;
                     }
-                    case 'department': {
+                    case 'department':
+                    {
                         $orderColumn = 'department.name';
                         break;
                     }
-                    case 'region': {
+                    case 'region':
+                    {
                         $orderColumn = 'region.name';
                         break;
                     }
@@ -205,8 +212,8 @@ class HomepageController extends AbstractController
         $countResult = $countQuery->getQuery()->getSingleScalarResult();
 
         return array(
-            "results"         => $results,
-            "countResult"    => $countResult
+            "results" => $results,
+            "countResult" => $countResult
         );
         // Returned objects are of type Town
         $objects = $results["results"];
@@ -236,7 +243,8 @@ class HomepageController extends AbstractController
                 $responseTemp = "-";
 
                 switch ($column['name']) {
-                    case 'name': {
+                    case 'name':
+                    {
 
                         $name = $town->getName();
 
@@ -257,7 +265,8 @@ class HomepageController extends AbstractController
                         break;
                     }
 
-                    case 'postalCode': {
+                    case 'postalCode':
+                    {
                         // We know from the class definition that the postal code cannot be null
                         // But if that werent't the case, its value should have been tested
                         // before assigning it to $responseTemp
@@ -265,7 +274,8 @@ class HomepageController extends AbstractController
                         break;
                     }
 
-                    case 'department': {
+                    case 'department':
+                    {
                         $department = $town->getDepartment();
                         // This cannot happen if inner join is used
                         // However it can happen if left or right joins are used
@@ -274,38 +284,40 @@ class HomepageController extends AbstractController
                         }
                         break;
                     }
-                    case 'region': {
-                        $department = $town->getDepartment();
-                        if ($department !== null) {
-                            $region = $department->getRegion();
-                            if ($region !== null) {
-                                $responseTemp = $region->getName();
+                    case 'region':
+                        {
+                            $department = $town->getDepartment();
+                            if ($department !== null) {
+                                $region = $department->getRegion();
+                                if ($region !== null) {
+                                    $responseTemp = $region->getName();
 
+                                }
+                                break;
                             }
-                            break;
                         }
+
+                        // Add the found data to the json
+                        $response .= $responseTemp;
+
+                        if (++$j !== $nbColumn)
+                            $response .= '","';
                 }
 
-                // Add the found data to the json
-                $response .= $responseTemp;
+                $response .= '"]';
 
-                if (++$j !== $nbColumn)
-                    $response .= '","';
+                // Not on the last item
+                if (++$i !== $selected_objects_count)
+                    $response .= ',';
             }
 
-            $response .= '"]';
+            $response .= ']}';
 
-            // Not on the last item
-            if (++$i !== $selected_objects_count)
-                $response .= ',';
+            // Send all this stuff back to DataTables
+            $returnResponse = new JsonResponse();
+            $returnResponse->setJson($response);
+
+            return $returnResponse;
         }
-
-        $response .= ']}';
-
-        // Send all this stuff back to DataTables
-        $returnResponse = new JsonResponse();
-        $returnResponse->setJson($response);
-
-        return $returnResponse;
     }
 }
