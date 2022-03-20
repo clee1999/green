@@ -22,19 +22,17 @@ class VilleRepository extends ServiceEntityRepository
     // /**
     //  * @return Ville[] Returns an array of Ville objects
     //  */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('v')
-            ->andWhere('v.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('v.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
+    //     public function findByExampleField($value)
+    // {
+    //     return $this->createQueryBuilder('v')
+    //         ->andWhere('v.exampleField = :val')
+    //         ->setParameter('val', $value)
+    //         ->orderBy('v.id', 'ASC')
+    //         ->setMaxResults(10)
+    //         ->getQuery()
+    //         ->getResult()
+    //     ;
+    // }
 
     /*
     public function findOneBySomeField($value): ?Ville
@@ -47,4 +45,22 @@ class VilleRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    //! For ville entity need : departement, region, score_golbal_departement, score_global_region 
+    
+    /**
+     * @return Ville[] Returns an array of Ville objects
+     */
+        public function findVilleByName($name)
+    {
+        return $this->createQueryBuilder('ville.score_global')
+            ->andWhere('ville.name = :name')
+            ->setParameter('name', $name)
+            ->orderBy('v.id', 'ASC')
+            ->setMaxResults(10)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
 }
