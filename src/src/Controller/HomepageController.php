@@ -13,11 +13,13 @@ class HomepageController extends AbstractController
     #[Route('/home', name: 'home')]
 
     public function index(AccesVilleRepository $accesVillerepository): Response
-    {
-        $test = $accesVillerepository->findAvgAccesNumeriqueDepartementByDepartementName('VAL DE MARNE');
+    {   
+        $testsingle = $accesVillerepository->findAvgAccesInformationRegionByRegionName('CORSE');
+        $testarray = $accesVillerepository->findVilleIndicesDepartementRegion('Abancourt');
         return $this->render('homepage/homepage.html.twig', [
             'controller_name' => 'HomepageController',
-            'test' => $test
+            'testarray' => $testarray,
+            'test' => $testsingle
         ]);
     }
 
